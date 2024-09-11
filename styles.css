@@ -1,0 +1,145 @@
+/*Regla HTML para no deformar y para configurar la fontsize 10px === 1rem*/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Homer Simpson UI"; /*  font-family en CSS se utiliza para especificar la tipografía o 
+    fuentes que se aplicarán al texto de un elemento HTML */
+}
+/* 
+Propósito: Establece el modelo de caja para el elemento html y todos sus descendientes.
+Explicación: Cuando se usa box-sizing: border-box, el padding y el border se incluyen 
+dentro de las dimensiones (width y height) del elemento. Esto facilita el cálculo del 
+tamaño total del elemento y evita sorpresas con el diseño, ya que el tamaño total del 
+elemento incluye el contenido, el padding y el border. */
+
+
+*, *:after,*:before{
+    box-sizing: inherit;
+}
+
+
+:root{
+    --color-primario : rgb(255, 255, 255); 
+    --color-h1 : rgb(34, 45, 34);
+}
+
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+span{
+    color: rgb(0, 123, 255);
+}
+
+nav{
+    background-color: rgb(69, 71, 71);
+    padding: 20px 0;
+}
+
+.nav-list {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0 10px; /* Ajusta el espacio entre los elementos de la lista */
+}
+
+.nav-link{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Color del enlace al pasar el cursor */
+}
+
+
+
+.catalogo-fotos {
+    display: flex; /* Mantiene las imágenes en fila */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1rem; /* Ajusta el espacio entre las imágenes */
+    
+}
+
+.foto-item {
+    width: 20%; /* Asegura que cada "tarjeta" (imagen + botón) tenga el mismo ancho */
+    text-align: center; /* Centra el botón */
+}
+
+.foto-item img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.catalogo-boton {
+    width: 100%; /* Hace que el botón tenga el mismo ancho que la imagen */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem; /* Ajusta el tamaño del texto */
+}
+
+.catalogo-boton:hover {
+    background-color: #0056b3; /* Color del botón al pasar el cursor */
+}
+
+.container {
+    display: flex;
+    height: 300px; /* Ajusta la altura según sea necesario */
+    margin-top: 10px;
+    gap: 2px;
+}
+
+.photo, .text {
+    flex: 1; /* Cada div ocupa la mitad del ancho del contenedor */
+}
+
+.photo img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
+}
+
+
+.text {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    flex-direction: column;
+    padding: 20px;
+    background-color: #a9b9c9; /* Color de fondo opcional para el texto */
+}
+
+.text h2 {
+    margin: 0;
+    font-size: 24px; /* Ajusta el tamaño de fuente según sea necesario */
+}
+
+.text p {
+    margin: 10px 0 0;
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+}
